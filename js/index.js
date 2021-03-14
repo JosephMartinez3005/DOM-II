@@ -27,8 +27,8 @@ h1.addEventListener('mouseout', changeH1Color)
 const anchor = document.querySelectorAll('.nav-link')
 
 anchor[0].addEventListener('click', event =>{
-    anchor[0].style.fontSize = '7rem'
-    anchor[0].style.color ='gold'
+    event.target.style.fontSize = '7rem'
+    event.target.style.color ='gold'
 })
 
 anchor[1].addEventListener('dblclick', event =>{
@@ -62,3 +62,7 @@ function changeColor()
   console.log(color[randomColor]);
   document.getElementsByTagName("body")[0].style.backgroundColor=color[randomColor];
 };
+
+document.addEventListener('keydown', event =>{
+    console.log(event.key)
+})
